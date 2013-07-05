@@ -1,0 +1,64 @@
+// Place all the styles related to the BlogPosts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Variables
+$sans_serif: Helvetica, Arial, Tahoma, sans-serif;
+$serif: 'Times New Roman', Times, serif;
+$gerry_red: #456456;
+$white: #fff;
+
+
+.container {
+  margin: auto;
+  width: 200px;
+  text-align: center;
+}
+
+.container textarea {
+
+}
+
+
+body {
+  background: $gerry_red;
+  font: 100%/1.5 $serif;
+  color: $white;
+  margin: auto;
+}
+
+a {
+  color: $white;
+}
+
+// Mixins
+@mixin rounded-box {
+  border-radius: 10px;
+  background: blue;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    @include rounded-box;
+    border-bottom: 1px solid $white;
+    display: inline-block;
+  }
+}
+
+h1 a {
+  font-size: 45px;
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+}
+
+textarea {
+  height: 50px;
+}
+

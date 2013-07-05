@@ -1,0 +1,17 @@
+<h3>Fdbks#index</h3>
+<p>Find me in app/views/fdbks/index.html.erb</p>
+
+
+<%= link_to('Create', new_fdbk_path) %>
+<br>
+<br>
+
+<% @fdbks.each do |x| %>
+  <%= x.status %>
+  <br>
+  <%= link_to 'show', x %>
+  <%= link_to 'edit', edit_fdbk_path(x) %>
+  <%= link_to 'destroy', x, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <br>
+  <br>
+  <% end %>
